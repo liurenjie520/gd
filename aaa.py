@@ -192,16 +192,7 @@ def sd():
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
         file_object.write(full_body)
 
-        body0 = body_string[0]
-        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + "1201" + "\nDTEND;VALUE=DATE:" + year + "1201" + "\n"
-        beizhu = "DESCRIPTION:" + '艾滋病日' + "\n"
-        body3 = "SUMMARY:" + "艾滋病日" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
-        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
-        body4 = body_string[1]
-        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
-        file_object.write(full_body)
+        
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
