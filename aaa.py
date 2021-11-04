@@ -6,7 +6,7 @@ def sd():
     year = datetime.datetime.today().year
 
     year = str(year)
-    with open(file="holiday.ics", encoding="utf8", mode="w") as file_object:
+    with open(file="gudingjie.ics", encoding="utf8", mode="w") as file_object:
         start_string = "BEGIN:VCALENDAR\nVERSION:2.0\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\nX-WR-CALNAME:" \
                        + "固定纪念日" + "\nX-WR-TIMEZONE:Asia/Shanghai\n" \
                        + "X-WR-CALDESC:"+year+"固定纪念日\n"
@@ -20,6 +20,17 @@ def sd():
         body2 = "DTSTART;VALUE=DATE:" + year + "0214" + "\nDTEND;VALUE=DATE:" + year + "0214" + "\n"
         beizhu = "DESCRIPTION:" + '214情人节' + "\n"
         body3 = "SUMMARY:" + "214" + '' + "情人节" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0520" + "\nDTEND;VALUE=DATE:" + year + "0520" + "\n"
+        beizhu = "DESCRIPTION:" + '520网络情人节' + "\n"
+        body3 = "SUMMARY:" + "214" + '' + "520网络情人节" + "\n"
         tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
@@ -96,8 +107,8 @@ def sd():
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
         body2 = "DTSTART;VALUE=DATE:" + year + "0605" + "\nDTEND;VALUE=DATE:" + year + "0605" + "\n"
-        beizhu = "DESCRIPTION:" + '65环境日' + "\n"
-        body3 = "SUMMARY:" + "65环境日" + "\n"
+        beizhu = "DESCRIPTION:" + '世界环境日' + "\n"
+        body3 = "SUMMARY:" + "世界环境日" + "\n"
         tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
@@ -107,8 +118,8 @@ def sd():
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
         body2 = "DTSTART;VALUE=DATE:" + year + "0701" + "\nDTEND;VALUE=DATE:" + year + "0701" + "\n"
-        beizhu = "DESCRIPTION:" + '71建党节（1921-07-01）' + "\n"
-        body3 = "SUMMARY:" + "71建党节" + "\n"
+        beizhu = "DESCRIPTION:" + '七一建党节（1921-07-01）、香港回归日' + "\n"
+        body3 = "SUMMARY:" + "七一建党节;香港回归日" + "\n"
         tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
@@ -118,8 +129,8 @@ def sd():
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
         body2 = "DTSTART;VALUE=DATE:" + year + "0801" + "\nDTEND;VALUE=DATE:" + year + "0801" + "\n"
-        beizhu = "DESCRIPTION:" + '81建军节' + "\n"
-        body3 = "SUMMARY:" + "81建军节" + "\n"
+        beizhu = "DESCRIPTION:" + '八一建军节' + "\n"
+        body3 = "SUMMARY:" + "八一建军节" + "\n"
         tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
@@ -173,8 +184,8 @@ def sd():
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
         body2 = "DTSTART;VALUE=DATE:" + year + "1010" + "\nDTEND;VALUE=DATE:" + year + "1010" + "\n"
-        beizhu = "DESCRIPTION:" + '辛亥革命（1911-10-10）' + "\n"
-        body3 = "SUMMARY:" + "辛亥革命" + "\n"
+        beizhu = "DESCRIPTION:" + '辛亥革命（1911-10-10）;大会员萌节' + "\n"
+        body3 = "SUMMARY:" + "辛亥革命;大会员萌节" + "\n"
         tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
@@ -214,6 +225,128 @@ def sd():
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
         file_object.write(full_body)
 
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0406" + "\nDTEND;VALUE=DATE:" + year + "0406" + "\n"
+        beizhu = "DESCRIPTION:" + '小米米粉节' + "\n"
+        body3 = "SUMMARY:" + "小米米粉节" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0816" + "\nDTEND;VALUE=DATE:" + year + "0816" + "\n"
+        beizhu = "DESCRIPTION:" + '小米816节' + "\n"
+        body3 = "SUMMARY:" + "小米816节" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "1024" + "\nDTEND;VALUE=DATE:" + year + "1024" + "\n"
+        beizhu = "DESCRIPTION:" + '1024程序员节' + "\n"
+        body3 = "SUMMARY:" + "1024程序员节" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0626" + "\nDTEND;VALUE=DATE:" + year + "0626" + "\n"
+        beizhu = "DESCRIPTION:" + 'B站周年庆' + "\n"
+        body3 = "SUMMARY:" + "B站周年庆" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0519" + "\nDTEND;VALUE=DATE:" + year + "0519" + "\n"
+        beizhu = "DESCRIPTION:" + '中国旅游日' + "\n"
+        body3 = "SUMMARY:" + "中国旅游日" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0808" + "\nDTEND;VALUE=DATE:" + year + "0808" + "\n"
+        beizhu = "DESCRIPTION:" + '全民健身日;2008北京奥运会' + "\n"
+        body3 = "SUMMARY:" + "全民健身日" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0918" + "\nDTEND;VALUE=DATE:" + year + "0918" + "\n"
+        beizhu = "DESCRIPTION:" + '九·一八事变，又称奉天事变、柳条湖事件。是1931年9月18日日本驻中国东北地区的关东军突然袭击沈阳，以武力侵占东北的事件。九·一八事变是由日本蓄意制造并发动的侵华战争，是日本帝国主义企图以武力征服中国的开端，是中国抗日战争的起点，标志着中国局部抗战的开始，揭开了第二次世界大战东方战场的序幕。九一八事变后，中国人民的局部抗战也标志着世界反法西斯战争的起点。' + "\n"
+        body3 = "SUMMARY:" + "九·一八纪念日" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "1201" + "\nDTEND;VALUE=DATE:" + year + "1201" + "\n"
+        beizhu = "DESCRIPTION:" + '世界艾滋病日' + "\n"
+        body3 = "SUMMARY:" + "世界艾滋病日" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "0618" + "\nDTEND;VALUE=DATE:" + year + "0618" + "\n"
+        beizhu = "DESCRIPTION:" + '京东618购物节' + "\n"
+        body3 = "SUMMARY:" + "京东618购物节" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "1111" + "\nDTEND;VALUE=DATE:" + year + "1111" + "\n"
+        beizhu = "DESCRIPTION:" + '双11' + "\n"
+        body3 = "SUMMARY:" + "双11" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        body2 = "DTSTART;VALUE=DATE:" + year + "1212" + "\nDTEND;VALUE=DATE:" + year + "1212" + "\n"
+        beizhu = "DESCRIPTION:" + '双12' + "\n"
+        body3 = "SUMMARY:" + "双12" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+
 
         end_string = "END:VCALENDAR"
         file_object.write(end_string)
@@ -221,7 +354,7 @@ def sd():
 
 
 
-#消费者日
+
 if __name__ == '__main__':
     a=sd()
     print(a)
