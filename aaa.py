@@ -337,10 +337,13 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.chuyi() + "\nDTEND;VALUE=DATE:" + year + card2.chuyi() + "\n"
+        djk=card2.chuyi()
+        time.sleep(7)
+
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '大年初一(春节)' + "\n"
         body3 = "SUMMARY:" + "大年初一(春节)" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.chuyi()+"T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk+"T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -348,10 +351,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.yuanxiao() + "\nDTEND;VALUE=DATE:" + year + card2.yuanxiao() + "\n"
+        djk=card2.yuanxiao()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '正月十五(元宵节)' + "\n"
         body3 = "SUMMARY:" + "正月十五(元宵节)" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.yuanxiao() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -359,7 +364,9 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.duanwu() + "\nDTEND;VALUE=DATE:" + year + card2.duanwu() + "\n"
+        djk=card2.duanwu()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '端午节（农历五月初五）' + "\n"
         body3 = "SUMMARY:" + "端午节（农历五月初五）" + "\n"
         tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.duanwu() + "T-20000Z" + "\n"
@@ -370,10 +377,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.qixi()+ "\nDTEND;VALUE=DATE:" + year + card2.qixi() + "\n"
+        djk=card2.qixi()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk+ "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '七夕节（农历七月初七）' + "\n"
         body3 = "SUMMARY:" + "七夕节（农历七月初七）" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.qixi() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -381,10 +390,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.zhongyuan1() + "\nDTEND;VALUE=DATE:" + year + card2.zhongyuan1() + "\n"
+        djk=card2.zhongyuan1()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '中元节（七月半）今天开始' + "\n"
         body3 = "SUMMARY:" + "中元节（七月半）今天开始" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.zhongyuan1() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -392,10 +403,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.zhongyuan2() + "\nDTEND;VALUE=DATE:" + year + card2.zhongyuan2() + "\n"
+        djk=card2.zhongyuan2()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '中元节（七月半）今天结束' + "\n"
         body3 = "SUMMARY:" + "中元节（七月半）今天结束" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.zhongyuan２() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -403,10 +416,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.zhongqiu() + "\nDTEND;VALUE=DATE:" + year + card2.zhongqiu() + "\n"
+        djk=card2.zhongqiu()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '中秋节（农历八月十五）' + "\n"
         body3 = "SUMMARY:" + "中秋节（农历八月十五）" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.zhongqiu() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -414,10 +429,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.chongyang() + "\nDTEND;VALUE=DATE:" + year + card2.chongyang() + "\n"
+        djk=card2.chongyang()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '重阳节（农历九月九）' + "\n"
         body3 = "SUMMARY:" + "重阳节（农历九月九）" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.chongyang() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -425,10 +442,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.laba() + "\nDTEND;VALUE=DATE:" + year + card2.laba() + "\n"
+        djk=card2.laba()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '腊八节（农历十二月初八）' + "\n"
         body3 = "SUMMARY:" + "腊八节（农历十二月初八）" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.laba() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -436,10 +455,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.xiaonian1() + "\nDTEND;VALUE=DATE:" + year + card2.xiaonian1() + "\n"
+        djk=card2.xiaonian1()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '小年（北方），灶王节，扫尘日' + "\n"
         body3 = "SUMMARY:" + "小年（北方），灶王节，扫尘日" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.xiaonian1() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -447,10 +468,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.xiaonian2() + "\nDTEND;VALUE=DATE:" + year + card2.xiaonian2() + "\n"
+        djk=card2.xiaonian2()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '小年（南方），灶王节，扫尘日' + "\n"
         body3 = "SUMMARY:" + "小年（南方），灶王节，扫尘日" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.xiaonian2() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -458,10 +481,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.qingming1() + "\nDTEND;VALUE=DATE:" + year + card2.qingming1() + "\n"
+        djk=card2.qingming1()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '清明节(今天开始)' + "\n"
         body3 = "SUMMARY:" + "清明节(今天开始)" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.qingming1() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -469,10 +494,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.qingming2() + "\nDTEND;VALUE=DATE:" + year + card2.qingming2() + "\n"
+        djk=card2.qingming2()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '清明节' + "\n"
         body3 = "SUMMARY:" + "清明节" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.qingming2() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
@@ -480,10 +507,12 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        body2 = "DTSTART;VALUE=DATE:" + year + card2.qingming3() + "\nDTEND;VALUE=DATE:" + year + card2.qingming3() + "\n"
+        djk=card2.qingming3()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:" + year + djk + "\nDTEND;VALUE=DATE:" + year + djk + "\n"
         beizhu = "DESCRIPTION:" + '清明节(结束日)' + "\n"
         body3 = "SUMMARY:" + "清明节(结束日)" + "\n"
-        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + card2.qingming3() + "T-20000Z" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
