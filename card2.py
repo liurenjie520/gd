@@ -3,6 +3,7 @@ import json
 import os
 import requests
 import urllib
+import chuyi
 
 
 import random
@@ -342,7 +343,7 @@ def laba():
         "Cookie": "PHPSESSID=d41i5vvp52a119knuokqk2ilh0; Hm_lpvt_ca368c21c1d2aa60e6f63d598c4cb02a=1624081986"
     }
     url = "https://www.iamwawa.cn/nongli/api"
-    year = datetime.datetime.today().year
+    year = chuyi.fenjie()
     year = str(year)
     params = {
         'type': 'lunar',
@@ -374,7 +375,7 @@ def xiaonian1():
         "Cookie": "PHPSESSID=d41i5vvp52a119knuokqk2ilh0; Hm_lpvt_ca368c21c1d2aa60e6f63d598c4cb02a=1624081986"
     }
     url = "https://www.iamwawa.cn/nongli/api"
-    year = datetime.datetime.today().year
+    year = chuyi.fenjie()
     year = str(year)
     params = {
         'type': 'lunar',
@@ -408,7 +409,7 @@ def xiaonian2():
         "Cookie": "PHPSESSID=d41i5vvp52a119knuokqk2ilh0; Hm_lpvt_ca368c21c1d2aa60e6f63d598c4cb02a=1624081986"
     }
     url = "https://www.iamwawa.cn/nongli/api"
-    year = datetime.datetime.today().year
+    year = chuyi.fenjie()
     year = str(year)
     params = {
         'type': 'lunar',
