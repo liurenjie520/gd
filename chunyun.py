@@ -1,6 +1,8 @@
 import datetime
 import json
 import os
+import time
+
 import requests
 import urllib
 
@@ -69,50 +71,7 @@ def get_headers():
 
 
 
-def chunyund1():
-    h = get_headers()
-    h = str(h)
-    headers = {
-        "Host": "www.iamwawa.cn",
-        "User-Agent": h,
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
-        "Cookie": "PHPSESSID=d41i5vvp52a119knuokqk2ilh0; Hm_lpvt_ca368c21c1d2aa60e6f63d598c4cb02a=1624081986"
-    }
-    url = "https://www.iamwawa.cn/nongli/api"
-    year = datetime.datetime.today().year
-    year = str(year)
-    params = {
-        'type': 'lunar',
-        'year': year,
-        'month': 12,
-        'day': 15
-    }
-    r = requests.post(url, headers=headers, data=params)
-    js = json.loads(r.text)
-    # print(js)
-    save_str = js["data"]["solar"]
-    a1=save_str.replace('年', '')
-    a2=a1.replace('月', '')
-    a3=a2.replace('日', '')
-    a3 = a3[4:]
-    # print(type(save_str))
-    # print(a3)
-    return a3
-
-
-def chunyund3():
-    k = chunyund1()
-    k = int(k)
-    k = k + 3
-    k = "%04d" % k
-    k=str(k)
-    return k
-
-
-
-
-def chunyund4():
+def chunyund():
     h = get_headers()
     h = str(h)
     headers = {
@@ -129,32 +88,71 @@ def chunyund4():
         'type': 'lunar',
         'year': year,
         'month': 1,
-        'day': 25
+        'day': 1
     }
+    time.sleep(7)
     r = requests.post(url, headers=headers, data=params)
     js = json.loads(r.text)
     # print(js)
     save_str = js["data"]["solar"]
-    a1=save_str.replace('年', '')
-    a2=a1.replace('月', '')
-    a3=a2.replace('日', '')
-    a3 = a3[4:]
+    # save_str='2022年02月01日'
+    # print(save_str)
     # print(type(save_str))
-    # print(a3)
-    return a3
+    d = datetime.datetime.strptime(save_str, '%Y年%m月%d日')
+
+
+
+
+    return d
+
+
+def chunyund1():
+    k = chunyund()
+    delta = datetime.timedelta(days=15)
+    disantian = k - delta
+    # print(disantian)
+    f = datetime.datetime.strftime(disantian, '%Y%m%d')
+    # print(type(f))
+    return f
+
+
+
+
+def chunyund3():
+    k = chunyund1()
+    d = datetime.datetime.strptime(k, '%Y%m%d')
+    delta = datetime.timedelta(days=3)
+    g=d+delta
+    f = datetime.datetime.strftime(g, '%Y%m%d')
+    # print(type(f))
+    return f
+
+
+def chunyund4():
+    k = chunyund()
+    delta = datetime.timedelta(days=24)
+    disantian = k + delta
+    # print(disantian)
+    f = datetime.datetime.strftime(disantian, '%Y%m%d')
+    # print(type(f))
+    return f
 
 
 def chunyund6():
-    k = chunyund1()
-    k = int(k)
-    k = k - 3
-    k = "%04d" % k
-    k=str(k)
-    return k
-if __name__ == '__main__':
-    k=chunyund3()
+    k = chunyund4()
+    d = datetime.datetime.strptime(k, '%Y%m%d')
+    delta = datetime.timedelta(days=3)
+    g = d - delta
+    f = datetime.datetime.strftime(g, '%Y%m%d')
+    # print(type(f))
+    return f
 
-    print(k)
+
+
+# if __name__ == '__main__':
+#     k=chunyund6()
+#
+#     print(k)
 
 
 
