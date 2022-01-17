@@ -121,7 +121,7 @@ def chunyund1():
 def chunyund3():
     k = chunyund1()
     d = datetime.datetime.strptime(k, '%Y%m%d')
-    delta = datetime.timedelta(days=3)
+    delta = datetime.timedelta(days=2)
     g=d+delta
     f = datetime.datetime.strftime(g, '%Y%m%d')
     # print(type(f))
