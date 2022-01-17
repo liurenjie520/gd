@@ -535,7 +535,7 @@ def sd():
 
         body0 = body_string[0]
         body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
-        djk = chunyun.chunyund4()
+        djk = chunyun.chunyund3()
         time.sleep(7)
         body2 = "DTSTART;VALUE=DATE:"  + djk + "\nDTEND;VALUE=DATE:" + djk + "\n"
         beizhu = "DESCRIPTION:" + '春运第三天(春节前15天后25天)' + "\n"
