@@ -2,6 +2,7 @@ import datetime
 import shuijishu
 import card2
 import time
+import chunyun
 
 
 def sd():
@@ -514,6 +515,58 @@ def sd():
         beizhu = "DESCRIPTION:" + '清明节(结束日)' + "\n"
         body3 = "SUMMARY:" + "清明节(结束日)" + "\n"
         tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:" + year + djk + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        djk = chunyun.chunyund1()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:"  + djk + "\nDTEND;VALUE=DATE:"  + djk + "\n"
+        beizhu = "DESCRIPTION:" + '春运第一天(春节前15天后25天)' + "\n"
+        body3 = "SUMMARY:" + "春运第一天" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:"  + djk + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        djk = chunyun.chunyund4()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:"  + djk + "\nDTEND;VALUE=DATE:" + djk + "\n"
+        beizhu = "DESCRIPTION:" + '春运第三天(春节前15天后25天)' + "\n"
+        body3 = "SUMMARY:" + "春运第三天" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:"  + djk + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        djk = chunyun.chunyund6()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:"  + djk + "\nDTEND;VALUE=DATE:"  + djk + "\n"
+        beizhu = "DESCRIPTION:" + '春运倒数第三天(春节前15天后25天)' + "\n"
+        body3 = "SUMMARY:" + "春运倒数第三天" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:"  + djk + "T-20000Z" + "\n"
+        tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
+        body4 = body_string[1]
+        full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
+        file_object.write(full_body)
+
+        body0 = body_string[0]
+        body1 = year + 'almanac_in_' + shuijishu.suiji() + "\n"
+        djk = chunyun.chunyund4()
+        time.sleep(7)
+        body2 = "DTSTART;VALUE=DATE:"  + djk + "\nDTEND;VALUE=DATE:"  + djk + "\n"
+        beizhu = "DESCRIPTION:" + '春运最后一天(春节前15天后25天)' + "\n"
+        body3 = "SUMMARY:" + "春运最后一天" + "\n"
+        tixing0 = "BEGIN:VALARM" + "\n" + "TRIGGER;VALUE=DATE-TIME:"  + djk + "T-20000Z" + "\n"
         tixing1 = "ACTION:DISPLAY" + "\n" + "END:VALARM" + "\n"
         body4 = body_string[1]
         full_body = body0 + body1 + body2 + beizhu + body3 + tixing0 + tixing1 + body4
